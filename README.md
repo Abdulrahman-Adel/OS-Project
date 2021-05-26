@@ -9,4 +9,6 @@
 5. Note input file should have the format for each line: `<process id> <arriving time> <burst time>`
 6. The program will write a line in the following format every time the CPU performs a context switch: `(<timestamp>, <process id>)` and lastly output the average waiting time: `Average waiting time <waiting time>` he outputs will be written in a file with the name of the scheduler and stored in the folder called `schedules`.
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/57441828/119667443-97400a00-be36-11eb-9f58-814e9d9a25ef.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/57441828/119667443-97400a00-be36-11eb-9f58-814e9d9a25ef.gif" />
+</p>
