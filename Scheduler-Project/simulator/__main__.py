@@ -37,11 +37,10 @@ if __name__ == '__main__':
     processes = read_input(input_file)
     
     # Schedulers
-    schedulers = [FCFS()]#, RoundRobin(), SRTF(), SJF()]
-    result_names = [RESULT_FCFS]#, RESULT_RR, RESULT_SRTF, RESULT_SJF]
+    schedulers = [FCFS(), RoundRobin(), SRTF(), SJF()]
+    result_names = [RESULT_FCFS, RESULT_RR, RESULT_SRTF, RESULT_SJF]
 
     for idx, scheduler in enumerate(schedulers):
         schedule = scheduler.schedule(deepcopy(processes))
         avg_waiting_time = scheduler.avg_waiting_time
-        print(f"avg_waiting_time: {avg_waiting_time}")
         write_output(os.path.join(RESULT_DIR, result_names[idx]), schedule, avg_waiting_time)

@@ -75,14 +75,8 @@ class Scheduler(ABC):
 
     def enqueue_new_jobs(self):
         """Enqueues new jobs that just came in into the ready queue."""
-        indecies = []
-        for idx in range(len(self.ordered)):
-            if self.ordered[idx].arrive_time == self.current_time:
-                self.q += [self.ordered[idx]]
-                indecies.append(idx)
-
-        for idx in indecies:
-            del self.ordered[idx]
+        while self.ordered and self.ordered[0].arrive_time == self.current_time:
+            self.q += [self.ordered.popleft()]
     def timer_interrupt(self):
         """
         Default only interrupts when a task has completed its execution
@@ -106,7 +100,7 @@ class Scheduler(ABC):
     @property
     def avg_waiting_time(self):
         """Returns the average waiting time of a schedule."""
-        return round(float(self.waiting_time + 1) / self.processes, 2)
+        return round(float(self.waiting_time) / self.processes, 2)
 
     def __repr__(self):
         """Return the scheduler's statistics as a string."""
