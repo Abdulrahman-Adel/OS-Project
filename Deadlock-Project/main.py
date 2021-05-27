@@ -55,8 +55,8 @@ if not (result):
     print("the system is in the deadlock state ")
     print("The Processes in the deadlock are : ")
     
-    for i in process:
-        if not(check[i]):
+    for i in range(len(process)):
+        if not check[i]:
             print(f"Process {process[i]}")
 else:
     print("System is not in the deadlock state")     
