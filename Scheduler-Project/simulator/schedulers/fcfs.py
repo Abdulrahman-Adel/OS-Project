@@ -14,8 +14,7 @@ class FCFS(Scheduler):
         """
         # TODO: Implement here your code.
         if self.q:
-            self.active = self.q[0]
-            del self.q[0]
+            self.active = self.q.popleft()
         else:
             self.active = None
         
