@@ -1,5 +1,8 @@
 # Deadlock Project
 1. Implement 'detect' function in Deadlock-Project/main.py file.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/57441828/119966603-c3c96280-bfab-11eb-823f-f2b9ce62f5b1.gif" />
+</p>
 
 # Scheduler Project:
 1. Implement function 'perform_schedule' function in Scheduler-Project/simulator/schedulers/{fcfs, rr, sjf, srtf}. 
